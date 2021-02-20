@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+  <div class="main_cont" id="app">
+    <div class="addPanel">
+      <label>
+        <input type="text" id="nameInput" v-model="addUser.name" placeholder="enter name">
+      </label>
+      <label>
+        <input type="text" id="ageInput" v-model="addUser.age" placeholder="enter age">
+      </label>
+      <button class="waves-effect pink lighten-2 btn" @click="pushUser(index)">add</button>
+    </div>
+
+    <div class="cont">
+      <div class="card_block" v-for="(user,index) in users">
+          <div class="my_card">
+            <!-- <img :src="user.avatar" alt=""> -->
+            <p>{{ user.name }}</p>
+            <p>{{ user.age }}</p>
+            <!-- v-on:change = "updateUser(index)" -->
+            <input type="text" id="new-name" v-model="user.name" placeholder="enter new name" >
+            <!-- value="user.name" v-model="user.name" -->
+            <input type="text" id="new-age" v-model="user.age" placeholder="enter new age">
+            <button class="waves-effect pink lighten-2 btn" @click="updateUser(index)">save</button>
+            <button class="waves-effect pink lighten-2 btn" @click="deleteUser(index)">delete</button> 
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+

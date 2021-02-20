@@ -1,0 +1,50 @@
+.my_card{
+  border: 1px solid black;
+  border-radius: 30px;
+  text-align: center;
+  color: #fff;
+  width: 80%;
+  margin: 30px auto;
+  padding: 10px;
+  background-color: rgb(101, 110, 110);
+}
+.my_card button {
+  width: 49%;
+  border-radius: 0 0 0 30px;
+}
+.my_card button:last-child {
+  border-radius: 0 0 30px 0;
+}
+  .addPanel {
+    background-color: rgb(105, 50, 82);
+    width: 100%;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 70px;
+    z-index: 3;
+  }
+
+  .addPanel label {
+    margin: 10px;
+    width: 20%;
+  }
+
+  input::placeholder,
+  input[type=text] {
+    padding-left: 20px;
+  }
+
+  .card_block {
+    margin-top: 100px;
+    width: 50%;
+  }
+  
+  .cont {
+    margin: 0 auto;
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
